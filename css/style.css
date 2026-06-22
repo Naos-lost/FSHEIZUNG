@@ -4,22 +4,22 @@
    =========================================================== */
 
 :root {
-  /* Navy aus dem FS-Logo */
-  --blue-900: #0a1a33;
-  --blue-700: #15295a;
-  --blue-500: #2e5ba8;
-  --blue-100: #e9edf6;
-  /* Rot aus dem FS-Logo, ersetzt das bisherige Orange als Hauptakzent */
-  --orange-600: #c41e2e;
-  --orange-500: #e0303f;
-  --orange-100: #fbe6e8;
+  /* Blau aus dem neuen FS-Logo (S) */
+  --blue-900: #0d2a4d;
+  --blue-700: #15457a;
+  --blue-500: #1f6fb8;
+  --blue-100: #e7eff7;
+  /* Rot aus dem neuen FS-Logo (F) */
+  --orange-600: #b91c26;
+  --orange-500: #d92834;
+  --orange-100: #fbe5e6;
   --cream: #f6f5f3;
   --white: #ffffff;
   --ink: #1b2230;
   --ink-soft: #525c68;
   --line: #e1e2e6;
   --radius: 10px;
-  --shadow: 0 10px 30px -10px rgba(10, 26, 51, 0.22);
+  --shadow: 0 10px 30px -10px rgba(13, 42, 77, 0.22);
   --maxw: 1180px;
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Inter", "Segoe UI", Arial, sans-serif;
@@ -154,12 +154,11 @@ header.site-header {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.25rem;
   color: var(--blue-900);
-  white-space: nowrap;
 }
 .logo .mark {
   width: 38px;
@@ -175,10 +174,26 @@ header.site-header {
   flex-shrink: 0;
 }
 .logo-img {
-  height: 42px;
+  height: 78px;
   width: auto;
   flex-shrink: 0;
-  border-radius: 6px;
+  object-fit: contain;
+}
+.logo .company-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  color: var(--blue-900);
+  white-space: normal;
+  max-width: 160px;
+}
+.footer-grid .logo-img {
+  height: 90px;
+}
+.footer-grid .company-name {
+  color: #fff;
+  font-size: 1.1rem;
 }
 
 nav.main-nav {
@@ -335,6 +350,11 @@ section.tight { padding: 56px 0; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 26px;
+}
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
 }
 .grid-2 {
   display: grid;
@@ -535,6 +555,7 @@ footer.site-footer {
 @media (max-width: 940px) {
   .hero-inner { grid-template-columns: 1fr; padding: 56px 24px 60px; }
   .grid-3, .grid-2, .steps { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
